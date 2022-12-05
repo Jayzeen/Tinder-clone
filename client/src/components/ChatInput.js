@@ -17,7 +17,7 @@ const ChatInput = ({ user, clickedUser, getUserMessages, getClickedUserMessages 
         }
 
         try {
-            await axios.post('http://localhost:8000/message', {message})
+            await axios.post('https://tinder-clone-backend-613d.onrender.com/message', {message})
             getUserMessages()
             getClickedUserMessages()
             setTextArea("")

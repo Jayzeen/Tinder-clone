@@ -15,7 +15,7 @@ const ChatDisplay = ({ user, clickedUser }) => {
     // Senders messages
     const getUserMessages = async () => {
         try {
-            const response = await axios.get('http://localhost:8000/messages', {
+            const response = await axios.get('https://tinder-clone-backend-613d.onrender.com/messages', {
                 params: { userId: userId, correspondingUserId: clickedUserId }
 
             })
@@ -30,7 +30,7 @@ const ChatDisplay = ({ user, clickedUser }) => {
     // Recipients messages
     const getClickedUserMessages = async () => {
         try {
-            const response = await axios.get('http://localhost:8000/messages', {
+            const response = await axios.get('https://tinder-clone-backend-613d.onrender.com/messages', {
                 params: { userId: clickedUserId, correspondingUserId: userId }
 
             })

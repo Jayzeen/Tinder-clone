@@ -27,7 +27,7 @@ const AuthModal = ({ setShowModal, isSignUp }) => {
                 setError('Passwords need to match')
                 return
             }
-            const response = await axios.post(`http://localhost:8000/${isSignUp ? 'signup' : 'login'}`, { email, password })
+            const response = await axios.post(`https://tinder-clone-backend-613d.onrender.com/${isSignUp ? 'signup' : 'login'}`, { email, password })
 
             // Saving Cookies
             setCookie('AuthToken', response.data.token)
